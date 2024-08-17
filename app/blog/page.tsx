@@ -19,7 +19,7 @@ export default async function Blog() {
       <h3 className={styles.blogPageTitle}>Posts</h3>
       <div className={styles.blogContainer}>
         {postData.map((post) => (
-          <Link href={`/blog/${post.id}`} className={styles.card}>
+          <Link key={post.id} href={`/blog/${post.id}`} className={styles.card}>
             <h3>{post.title}</h3>
             <p>{post.date}</p>
           </Link>

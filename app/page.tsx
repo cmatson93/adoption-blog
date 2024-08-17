@@ -34,12 +34,10 @@ export default function Home() {
         </div>
         <div className={styles.btnContainer}>
           <Link className={styles.linkBtn} href="/blog">
-            {" "}
-            Read more{" "}
+            Read more
           </Link>
           <Link className={styles.linkBtn} href="/newsletter">
-            {" "}
-            Subscribe{" "}
+            Subscribe
           </Link>
         </div>
       </div>
