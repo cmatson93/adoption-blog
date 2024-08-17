@@ -1,0 +1,67 @@
+.homeContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.homeHeading {
+  padding: 20px;
+}
+
+.homeHeading h5 {
+  font-size: 1.25rem;
+  color: var(--color-purple);
+  margin-top: 1.25rem;
+}
+
+.homeHeading h1 {
+  font-size: 3rem;
+  color: var(--color-purple);
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.familyImg {
+  width: 75%;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.linkBtn {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  padding: 12px;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+
+.linkBtn:hover {
+  background-color: var(--color-purple-hover);
+  cursor: pointer;
+}
+
+.linkBtn:active {
+  background-color: var(--color-purple-hover);
+}
+
+@media (max-width: 770px) {
+  .homeContent {
+    width: 100%;
+  }
+
+  .homeHeading h1 {
+    font-size: 2.25rem;
+  }
+
+  .homeHeading h5 {
+    font-size: 1.1rem;
+  }
+}

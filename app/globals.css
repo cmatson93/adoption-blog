@@ -1,6 +1,7 @@
+/* @tailwind components; */
+/* @tailwind utilities; */
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* 
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -30,4 +31,26 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+} */
+
+:root {
+  --color-purple: #5a5475;
+  --color-purple-hover: #433f57;
+  --color-black: #000000;
+  --color-pink: #ffb8d1;
+  --color-light-purple: #c5a3ff;
+  --color-yellow: #fff352;
+  --color-yellow-hover: #ffee05;
+  --color-bright-purple: #ae81ff;
+  --color-bright-pink: #f92672;
+  --color-teal: #c2ffdf;
+  --color-charcoal-black: #3e3d32;
+  --color-yellow-gold: #e6c000;
+  --color-white: #f8f8f2;
+  --color-white-hover: #efefe1;
+
+  /* background: var(--color-purple); */
+  background: #f8f8f2;
+  color: var(--color-purple);
+  box-sizing: border-box;
 }
