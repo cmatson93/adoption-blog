@@ -10,6 +10,7 @@ import matter from "gray-matter";
 // Import 'remark', library for rendering markdown
 import { remark } from "remark";
 import html from "remark-html";
+import breaks from "remark-breaks";
 
 // --------------------------------
 // GET THE PATH OF THE POSTS FOLDER
@@ -116,6 +117,7 @@ export async function getPostData(id: string) {
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
     .use(html)
+    .use(breaks)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 

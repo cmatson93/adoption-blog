@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 import familyPhoto from "./assets/family-photo.jpeg";
+import { NavigationButtons } from "./components/navigation-buttons";
 
 import styles from "./styles.module.css";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -32,14 +32,7 @@ export default function Home() {
             Newsletter tab and input your info there to sign up!`}
           </h5>
         </div>
-        <div className={styles.btnContainer}>
-          <Link className={styles.linkBtn} href="/blog">
-            Read more
-          </Link>
-          <Link className={styles.linkBtn} href="/newsletter">
-            Subscribe
-          </Link>
-        </div>
+        <NavigationButtons />
       </div>
     </div>
   );

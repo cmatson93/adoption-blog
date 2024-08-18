@@ -16,3 +16,26 @@
 .markdown h3 {
   @apply text-2xl mt-8 mb-4 leading-snug;
 }
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.linkBtn {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  padding: 12px;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+
+.linkBtn:hover {
+  background-color: var(--color-purple-hover);
+  cursor: pointer;
+}
+
+.linkBtn:active {
+  background-color: var(--color-purple-hover);
+}

@@ -1,6 +1,10 @@
+import Markdown from "react-markdown";
 import Date from "@/app/components/Date";
 
 import { getPostData } from "@/app/lib/posts";
+
+import styles from "./styles.module.css";
+import { NavigationButtons } from "@/app/components/navigation-buttons";
 
 type Params = {
   slug: string;
@@ -32,17 +36,16 @@ export default async function Post({ params }: Props) {
   return (
     <>
       {/* Post Title */}
-      <h1 className="font-extrabold text-3xl mb-1">{postData.title}</h1>
+      <h1 className={styles.title}>{postData.title}</h1>
 
-      <div className="text-gray-500 font-medium mb-5">
+      <div className={styles.dateContainer}>
         <Date dateString={postData.date} />
       </div>
 
       {/* Post Content */}
-      <div
-        className="text-gray-600"
-        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-      />
+      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+
+      <NavigationButtons />
     </>
   );
 }
