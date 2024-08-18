@@ -1,4 +1,3 @@
-import Markdown from "react-markdown";
 import Date from "@/app/components/Date";
 
 import { getPostData } from "@/app/lib/posts";
