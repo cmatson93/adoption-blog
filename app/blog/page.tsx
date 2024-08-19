@@ -1,5 +1,6 @@
 import { getSortedPostsData } from "@/app/lib/posts";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 import styles from "./styles.module.css";
 
@@ -12,7 +13,10 @@ type PostData = {
 export default async function Blog() {
   const postData: PostData[] = await getSortedPostsData();
 
-  console.log("postData ", postData);
+  // If there is only one post, redirect to that post's page
+  if (postData.length === 1) {
+    redirect(`/blog/${postData[0].id}`);
+  }
 
   return (
     <div className={styles.list}>
