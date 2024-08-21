@@ -88,8 +88,8 @@ export default function SubscribeButton() {
       <div className={styles.btnContainer}>
         {showError && (
           <p className={styles.errorText}>
-            Sorry, something went wrong please try again later. If it's still
-            not working contact me and let me know!
+            {`Sorry, something went wrong please try again later. If it's still
+            not working contact me and let me know!`}
           </p>
         )}
         {showSuccess && (
