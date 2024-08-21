@@ -38,7 +38,7 @@ export default function RootLayout({
           </header>
 
           {/* MAIN */}
-          <main>{children}</main>
+          <main style={{ width: "100%" }}>{children}</main>
 
           {/* FOOTER */}
           {/* {!home && (
