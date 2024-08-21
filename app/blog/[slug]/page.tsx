@@ -33,7 +33,7 @@ export default async function Post({ params }: Props) {
   const postData: PostData = await getPostData(params.slug);
 
   return (
-    <>
+    <div className={styles.blogContainer}>
       {/* Post Title */}
       <h1 className={styles.title}>{postData.title}</h1>
 
@@ -42,10 +42,13 @@ export default async function Post({ params }: Props) {
       </div>
 
       {/* Post Content */}
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <div
+        className={styles.content}
+        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+      />
 
       <NavigationButtons />
-    </>
+    </div>
   );
 }
 

@@ -1,7 +1,18 @@
+.blogContainer {
+  padding: 10px 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .title {
   font-weight: bold;
   font-weight: bold;
   font-size: 30px;
+}
+
+.content {
+  max-width: 500px;
 }
 
 .dateContainer {
