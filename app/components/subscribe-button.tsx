@@ -14,13 +14,18 @@ export default function SubscribeButton() {
   const subscribe = async () => {
     const url = `/api/mailchimp`;
 
+    const firstName = name.split(" ")[0];
+    const lastName = name.split(" ")[1];
+
     const data = {
       email_address: email,
       merge_fields: {
-        FNAME: name,
-        LNAME: "",
+        FNAME: firstName ?? name,
+        LNAME: lastName ?? "",
       },
     };
+
+    console.log("fetching");
 
     try {
       const response = await fetch(url, {
@@ -55,8 +60,9 @@ export default function SubscribeButton() {
     }
   };
 
-  const handleSubmit = () => {
-    console.log("submitting!");
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
     // Validate
     // If everything is correct call subscribe
     subscribe();
@@ -85,18 +91,18 @@ export default function SubscribeButton() {
           className={styles.input}
         />
       </div>
-      <div className={styles.btnContainer}>
-        {showError && (
-          <p className={styles.errorText}>
-            {`Sorry, something went wrong please try again later. If it's still
+      {showError && (
+        <p className={styles.errorText}>
+          {`Sorry, something went wrong please try again later. If it's still
             not working contact me and let me know!`}
-          </p>
-        )}
-        {showSuccess && (
-          <p className={styles.successText}>
-            {`You subscribed! You will receive an email at ${email}, when we post our next update!`}
-          </p>
-        )}
+        </p>
+      )}
+      {showSuccess && (
+        <p className={styles.successText}>
+          {`You subscribed! You will receive an email at ${email}, when we post our next update!`}
+        </p>
+      )}
+      <div className={styles.btnContainer}>
         <button type="submit" disabled={submitted} className={styles.btn}>
           {submitted ? "Submitting..." : "Subscribe"}
         </button>

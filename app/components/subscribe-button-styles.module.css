@@ -28,6 +28,14 @@
   outline: none;
 }
 
+.errorText {
+  color: var(--color-yellow-gold);
+}
+
+.successText {
+  color: var(--color-white);
+}
+
 .btnContainer {
   display: flex;
   width: 100%;
