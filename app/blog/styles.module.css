@@ -15,7 +15,6 @@
   box-sizing: border-box;
   border-radius: 8px;
   text-shadow: none;
-  /* height: 224px; */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: start;
@@ -24,4 +23,9 @@
   padding: 1rem;
   margin-top: 25px;
   margin-right: 20px;
+}
+
+.postTitle {
+  font-size: 20px;
+  font-weight: 400;
 }

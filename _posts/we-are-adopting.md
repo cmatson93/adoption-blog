@@ -1,6 +1,6 @@
 ---
 title: "We're Adopting!"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
+excerpt: "After over two years of paperwork and waiting we are nearing the end of finalizing our adoption! This post shares a bit about the backstory of why we decided to adopt and what led us to this point."
 coverImage: "/assets/blog/hello-world/cover.jpg"
 date: "2024-08-16T05:35:07.322Z"
 author:
