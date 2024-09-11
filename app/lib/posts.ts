@@ -107,11 +107,7 @@ export function getAllPostIds() {
 // --------------------------------
 // GET THE DATA OF A SINGLE POST FROM THE ID
 export async function getPostData(id: string) {
-  console.log("id ", id);
-
   const fullPath = path.join(postsDirectory, `${id}.md`);
-
-  console.log("fullpath ", fullPath);
 
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
@@ -129,6 +125,9 @@ export async function getPostData(id: string) {
   return {
     id,
     contentHtml,
-    ...(matterResult.data as { date: string; title: string }),
+    ...(matterResult.data as {
+      date: string;
+      title: string;
+    }),
   };
 }
