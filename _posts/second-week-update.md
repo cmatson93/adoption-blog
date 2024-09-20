@@ -10,8 +10,8 @@ ogImage:
   url: "/assets/blog/hello-world/cover.jpg"
 ---
 
-![korea](/images/exploring.jpg)
-_Exploring a Seoul_
+![korea](/images/exploring.JPEG)
+_Exploring Seoul_
 
 <br/>
 
